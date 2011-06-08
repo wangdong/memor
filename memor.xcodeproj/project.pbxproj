@@ -1,0 +1,394 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7EB15FA7139FAFC400F22617 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EB15FA6139FAFC400F22617 /* Foundation.framework */; };
+		7EB15FB2139FAFC400F22617 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EB15FB1139FAFC400F22617 /* UIKit.framework */; };
+		7EB15FB3139FAFC400F22617 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EB15FA6139FAFC400F22617 /* Foundation.framework */; };
+		7EB15FB5139FAFC400F22617 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EB15FB4139FAFC400F22617 /* CoreGraphics.framework */; };
+		7EB15FB8139FAFC400F22617 /* libmemor.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EB15FA3139FAFC400F22617 /* libmemor.a */; };
+		7EB15FBE139FAFC400F22617 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7EB15FBC139FAFC400F22617 /* InfoPlist.strings */; };
+		7EB15FC1139FAFC400F22617 /* memorTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 7EB15FC0139FAFC400F22617 /* memorTests.h */; };
+		7EB15FC3139FAFC400F22617 /* memorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EB15FC2139FAFC400F22617 /* memorTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7EB15FB6139FAFC400F22617 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7EB15F9A139FAFC400F22617 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7EB15FA2139FAFC400F22617;
+			remoteInfo = memor;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7EB15FA3139FAFC400F22617 /* libmemor.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libmemor.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		7EB15FA6139FAFC400F22617 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7EB15FAA139FAFC400F22617 /* memor-Prefix.pch */ = {isa = PBXFileReference; path = "memor-Prefix.pch"; sourceTree = "<group>"; };
+		7EB15FB0139FAFC400F22617 /* memorTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = memorTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7EB15FB1139FAFC400F22617 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		7EB15FB4139FAFC400F22617 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		7EB15FBB139FAFC400F22617 /* memorTests-Info.plist */ = {isa = PBXFileReference; path = "memorTests-Info.plist"; sourceTree = "<group>"; };
+		7EB15FBD139FAFC400F22617 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7EB15FBF139FAFC400F22617 /* memorTests-Prefix.pch */ = {isa = PBXFileReference; path = "memorTests-Prefix.pch"; sourceTree = "<group>"; };
+		7EB15FC0139FAFC400F22617 /* memorTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = memorTests.h; sourceTree = "<group>"; };
+		7EB15FC2139FAFC400F22617 /* memorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = memorTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7EB15FA0139FAFC400F22617 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EB15FA7139FAFC400F22617 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7EB15FAC139FAFC400F22617 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EB15FB2139FAFC400F22617 /* UIKit.framework in Frameworks */,
+				7EB15FB3139FAFC400F22617 /* Foundation.framework in Frameworks */,
+				7EB15FB5139FAFC400F22617 /* CoreGraphics.framework in Frameworks */,
+				7EB15FB8139FAFC400F22617 /* libmemor.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7EB15F98139FAFC400F22617 = {
+			isa = PBXGroup;
+			children = (
+				7EB15FA8139FAFC400F22617 /* memor */,
+				7EB15FB9139FAFC400F22617 /* memorTests */,
+				7EB15FA5139FAFC400F22617 /* Frameworks */,
+				7EB15FA4139FAFC400F22617 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7EB15FA4139FAFC400F22617 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7EB15FA3139FAFC400F22617 /* libmemor.a */,
+				7EB15FB0139FAFC400F22617 /* memorTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7EB15FA5139FAFC400F22617 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7EB15FA6139FAFC400F22617 /* Foundation.framework */,
+				7EB15FB1139FAFC400F22617 /* UIKit.framework */,
+				7EB15FB4139FAFC400F22617 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7EB15FA8139FAFC400F22617 /* memor */ = {
+			isa = PBXGroup;
+			children = (
+				7EB15FA9139FAFC400F22617 /* Supporting Files */,
+			);
+			path = memor;
+			sourceTree = "<group>";
+		};
+		7EB15FA9139FAFC400F22617 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7EB15FAA139FAFC400F22617 /* memor-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7EB15FB9139FAFC400F22617 /* memorTests */ = {
+			isa = PBXGroup;
+			children = (
+				7EB15FC0139FAFC400F22617 /* memorTests.h */,
+				7EB15FC2139FAFC400F22617 /* memorTests.m */,
+				7EB15FBA139FAFC400F22617 /* Supporting Files */,
+			);
+			path = memorTests;
+			sourceTree = "<group>";
+		};
+		7EB15FBA139FAFC400F22617 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7EB15FBB139FAFC400F22617 /* memorTests-Info.plist */,
+				7EB15FBC139FAFC400F22617 /* InfoPlist.strings */,
+				7EB15FBF139FAFC400F22617 /* memorTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		7EB15FA1139FAFC400F22617 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		7EB15FA2139FAFC400F22617 /* memor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7EB15FC6139FAFC400F22617 /* Build configuration list for PBXNativeTarget "memor" */;
+			buildPhases = (
+				7EB15F9F139FAFC400F22617 /* Sources */,
+				7EB15FA0139FAFC400F22617 /* Frameworks */,
+				7EB15FA1139FAFC400F22617 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = memor;
+			productName = memor;
+			productReference = 7EB15FA3139FAFC400F22617 /* libmemor.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		7EB15FAF139FAFC400F22617 /* memorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7EB15FC9139FAFC400F22617 /* Build configuration list for PBXNativeTarget "memorTests" */;
+			buildPhases = (
+				7EB15FAB139FAFC400F22617 /* Sources */,
+				7EB15FAC139FAFC400F22617 /* Frameworks */,
+				7EB15FAD139FAFC400F22617 /* Resources */,
+				7EB15FAE139FAFC400F22617 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7EB15FB7139FAFC400F22617 /* PBXTargetDependency */,
+			);
+			name = memorTests;
+			productName = memorTests;
+			productReference = 7EB15FB0139FAFC400F22617 /* memorTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7EB15F9A139FAFC400F22617 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 7EB15F9D139FAFC400F22617 /* Build configuration list for PBXProject "memor" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7EB15F98139FAFC400F22617;
+			productRefGroup = 7EB15FA4139FAFC400F22617 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7EB15FA2139FAFC400F22617 /* memor */,
+				7EB15FAF139FAFC400F22617 /* memorTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7EB15FAD139FAFC400F22617 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EB15FBE139FAFC400F22617 /* InfoPlist.strings in Resources */,
+				7EB15FC1139FAFC400F22617 /* memorTests.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7EB15FAE139FAFC400F22617 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7EB15F9F139FAFC400F22617 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7EB15FAB139FAFC400F22617 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EB15FC3139FAFC400F22617 /* memorTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7EB15FB7139FAFC400F22617 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7EB15FA2139FAFC400F22617 /* memor */;
+			targetProxy = 7EB15FB6139FAFC400F22617 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7EB15FBC139FAFC400F22617 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7EB15FBD139FAFC400F22617 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7EB15FC4139FAFC400F22617 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		7EB15FC5139FAFC400F22617 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		7EB15FC7139FAFC400F22617 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DSTROOT = /tmp/memor.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "memor/memor-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		7EB15FC8139FAFC400F22617 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DSTROOT = /tmp/memor.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "memor/memor-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		7EB15FCA139FAFC400F22617 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "memorTests/memorTests-Prefix.pch";
+				INFOPLIST_FILE = "memorTests/memorTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		7EB15FCB139FAFC400F22617 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "memorTests/memorTests-Prefix.pch";
+				INFOPLIST_FILE = "memorTests/memorTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7EB15F9D139FAFC400F22617 /* Build configuration list for PBXProject "memor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7EB15FC4139FAFC400F22617 /* Debug */,
+				7EB15FC5139FAFC400F22617 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7EB15FC6139FAFC400F22617 /* Build configuration list for PBXNativeTarget "memor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7EB15FC7139FAFC400F22617 /* Debug */,
+				7EB15FC8139FAFC400F22617 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		7EB15FC9139FAFC400F22617 /* Build configuration list for PBXNativeTarget "memorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7EB15FCA139FAFC400F22617 /* Debug */,
+				7EB15FCB139FAFC400F22617 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7EB15F9A139FAFC400F22617 /* Project object */;
+}
