@@ -11,9 +11,13 @@
 
 
 @interface NaAtom : NSObject {
+@private
     NaAtomRawData* rawData;
 }
 
+@property(readonly, nonatomic) NaAtomRawData* rawData;
+
+-(id) initWithRawData: (NaAtomRawData*)data;
 -(void) beforeWrite;
 -(NaAtomRawData*) swapData: (NaAtomRawData*)data;
 

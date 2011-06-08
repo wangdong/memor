@@ -19,7 +19,7 @@
     return self;
 }
 
--(NaAtomRawData*) copy {
+-(NaAtomRawData*) deepCopy {
     assert(false);
     return [self retain];
 }

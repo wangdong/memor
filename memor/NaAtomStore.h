@@ -14,6 +14,7 @@
 @class NaAtomRawData;
 
 @interface NaAtomStore : NSObject {
+@private
     id snapshotStack;
     uint32_t tip;
 }

@@ -44,6 +44,7 @@
 
 -(void) dealloc {
     [atomImages release];
+    [super dealloc];
 }
 
 -(id) init {
@@ -67,6 +68,8 @@
 }
 
 -(void) clear {
+    for (id i in atomImages)
+        [i release];
     [atomImages removeAllObjects];
 }
 
@@ -100,6 +103,7 @@
 
 -(void) dealloc {
     [snapshots release];
+    [super dealloc];
 }
 
 -(id) init {
@@ -121,7 +125,6 @@
     if ([self snapshotsAhead] == 0) {
         NaAtomSnapshot* snapshot = [[NaAtomSnapshot alloc] init];
         [snapshots addObject:snapshot];
-        [snapshot release];
     }
     ++top;
     
@@ -140,8 +143,10 @@
 
 -(void) cleanupAhead {
     uint32_t size = [snapshots count];
-    for (uint32_t i = top + 1; i < size; ++i)
+    for (uint32_t i = top + 1; i < size; ++i) {
+        [[snapshots lastObject] release];
         [snapshots removeLastObject];
+    }
 }
 
 -(bool) isEmpty {
@@ -156,6 +161,7 @@
     for (id i in snapshots) {
         NaAtomSnapshot* snapshot = (NaAtomSnapshot*)i;
         [snapshot clear];
+        [snapshot release];
     }
     [snapshots removeAllObjects];
     
@@ -170,6 +176,7 @@
         for (int i = 0; i < count; ++i) {
             NaAtomSnapshot* snapshot = [snapshots objectAtIndex: i];
             [snapshot clear];
+            [[snapshots objectAtIndex:0] release];
             [snapshots removeObjectAtIndex: 0];
             --top;
         }
@@ -185,6 +192,7 @@
 
 -(void) dealloc {
     [snapshotStack release];
+    [super dealloc];
 }
 
 -(id) init {
@@ -242,7 +250,7 @@
 -(NaAtomRawData*) needCopy: atom rawData: (NaAtomRawData*)data {
     if ([data tip] < tip) {
         [[snapshotStack top] appendAtom:atom rawData:data];
-        data = [data copy];
+        data = [data deepCopy];
     }
     return data;
 }

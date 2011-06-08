@@ -7,7 +7,35 @@
 //
 
 #import "NaAtom.h"
+#import "NaAtomStore.h"
+
 
 @implementation NaAtom
+@synthesize rawData;
+
+
+-(void) dealloc {
+    [rawData release];
+    [super dealloc];
+}
+
+-(id) initWithRawData: (NaAtomRawData*)data {
+    self = [super init];
+    rawData = data;
+    [rawData retain];
+    return self;
+}
+
+
+
+-(void) beforeWrite {
+    rawData = [[NaAtomStore sharedStore] needCopy: self rawData: rawData];
+}
+
+-(NaAtomRawData*) swapData: (NaAtomRawData*)data {
+    NaAtomRawData* tmp = rawData;
+    rawData = data;
+    return tmp;
+}
 
 @end

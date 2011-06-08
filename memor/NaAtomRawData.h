@@ -10,12 +10,13 @@
 
 
 @interface NaAtomRawData : NSObject {
+@private
     uint32_t tip;
 }
 
 @property(nonatomic, readonly) uint32_t tip;
 
--(NaAtomRawData*) copy;
+-(NaAtomRawData*) deepCopy;
 
 @end
 
