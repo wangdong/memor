@@ -15,6 +15,15 @@
 		7EB15FBE139FAFC400F22617 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7EB15FBC139FAFC400F22617 /* InfoPlist.strings */; };
 		7EB15FC1139FAFC400F22617 /* memorTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 7EB15FC0139FAFC400F22617 /* memorTests.h */; };
 		7EB15FC3139FAFC400F22617 /* memorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EB15FC2139FAFC400F22617 /* memorTests.m */; };
+		7EB15FCE139FB01800F22617 /* NaAtomStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 7EB15FCC139FB01800F22617 /* NaAtomStore.h */; };
+		7EB15FCF139FB01800F22617 /* NaAtomStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EB15FCD139FB01800F22617 /* NaAtomStore.m */; };
+		7EB15FD0139FB01800F22617 /* NaAtomStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EB15FCD139FB01800F22617 /* NaAtomStore.m */; };
+		7EB15FD3139FB02500F22617 /* NaAtom.h in Headers */ = {isa = PBXBuildFile; fileRef = 7EB15FD1139FB02500F22617 /* NaAtom.h */; };
+		7EB15FD4139FB02500F22617 /* NaAtom.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EB15FD2139FB02500F22617 /* NaAtom.m */; };
+		7EB15FD5139FB02500F22617 /* NaAtom.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EB15FD2139FB02500F22617 /* NaAtom.m */; };
+		7EB15FD8139FB03100F22617 /* NaAtomRawData.h in Headers */ = {isa = PBXBuildFile; fileRef = 7EB15FD6139FB03100F22617 /* NaAtomRawData.h */; };
+		7EB15FD9139FB03100F22617 /* NaAtomRawData.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EB15FD7139FB03100F22617 /* NaAtomRawData.m */; };
+		7EB15FDA139FB03100F22617 /* NaAtomRawData.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EB15FD7139FB03100F22617 /* NaAtomRawData.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,15 +39,21 @@
 /* Begin PBXFileReference section */
 		7EB15FA3139FAFC400F22617 /* libmemor.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libmemor.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EB15FA6139FAFC400F22617 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		7EB15FAA139FAFC400F22617 /* memor-Prefix.pch */ = {isa = PBXFileReference; path = "memor-Prefix.pch"; sourceTree = "<group>"; };
+		7EB15FAA139FAFC400F22617 /* memor-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "memor-Prefix.pch"; sourceTree = "<group>"; };
 		7EB15FB0139FAFC400F22617 /* memorTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = memorTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EB15FB1139FAFC400F22617 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7EB15FB4139FAFC400F22617 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		7EB15FBB139FAFC400F22617 /* memorTests-Info.plist */ = {isa = PBXFileReference; path = "memorTests-Info.plist"; sourceTree = "<group>"; };
+		7EB15FBB139FAFC400F22617 /* memorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "memorTests-Info.plist"; sourceTree = "<group>"; };
 		7EB15FBD139FAFC400F22617 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		7EB15FBF139FAFC400F22617 /* memorTests-Prefix.pch */ = {isa = PBXFileReference; path = "memorTests-Prefix.pch"; sourceTree = "<group>"; };
+		7EB15FBF139FAFC400F22617 /* memorTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "memorTests-Prefix.pch"; sourceTree = "<group>"; };
 		7EB15FC0139FAFC400F22617 /* memorTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = memorTests.h; sourceTree = "<group>"; };
 		7EB15FC2139FAFC400F22617 /* memorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = memorTests.m; sourceTree = "<group>"; };
+		7EB15FCC139FB01800F22617 /* NaAtomStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NaAtomStore.h; sourceTree = "<group>"; };
+		7EB15FCD139FB01800F22617 /* NaAtomStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NaAtomStore.m; sourceTree = "<group>"; };
+		7EB15FD1139FB02500F22617 /* NaAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NaAtom.h; sourceTree = "<group>"; };
+		7EB15FD2139FB02500F22617 /* NaAtom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NaAtom.m; sourceTree = "<group>"; };
+		7EB15FD6139FB03100F22617 /* NaAtomRawData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NaAtomRawData.h; sourceTree = "<group>"; };
+		7EB15FD7139FB03100F22617 /* NaAtomRawData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NaAtomRawData.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +112,12 @@
 			isa = PBXGroup;
 			children = (
 				7EB15FA9139FAFC400F22617 /* Supporting Files */,
+				7EB15FD1139FB02500F22617 /* NaAtom.h */,
+				7EB15FD2139FB02500F22617 /* NaAtom.m */,
+				7EB15FD6139FB03100F22617 /* NaAtomRawData.h */,
+				7EB15FD7139FB03100F22617 /* NaAtomRawData.m */,
+				7EB15FCC139FB01800F22617 /* NaAtomStore.h */,
+				7EB15FCD139FB01800F22617 /* NaAtomStore.m */,
 			);
 			path = memor;
 			sourceTree = "<group>";
@@ -136,6 +157,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EB15FCE139FB01800F22617 /* NaAtomStore.h in Headers */,
+				7EB15FD3139FB02500F22617 /* NaAtom.h in Headers */,
+				7EB15FD8139FB03100F22617 /* NaAtomRawData.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,6 +258,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EB15FCF139FB01800F22617 /* NaAtomStore.m in Sources */,
+				7EB15FD4139FB02500F22617 /* NaAtom.m in Sources */,
+				7EB15FD9139FB03100F22617 /* NaAtomRawData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,6 +269,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7EB15FC3139FAFC400F22617 /* memorTests.m in Sources */,
+				7EB15FD0139FB01800F22617 /* NaAtomStore.m in Sources */,
+				7EB15FD5139FB02500F22617 /* NaAtom.m in Sources */,
+				7EB15FDA139FB03100F22617 /* NaAtomRawData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
