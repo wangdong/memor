@@ -16,7 +16,7 @@
 
 @property(nonatomic, readonly) uint32_t tip;
 
--(NaAtomRawData*) deepCopy;
+-(NaAtomRawData*) copyData;
 
 @end
 

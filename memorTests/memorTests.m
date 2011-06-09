@@ -25,7 +25,7 @@
 @implementation MyAtomData
 @synthesize msg;
 
--(NaAtomRawData*) deepCopy {
+-(NaAtomRawData*) copyData {
 
     MyAtomData* data = [[MyAtomData alloc] init];
     data.msg = self.msg;

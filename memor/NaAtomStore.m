@@ -262,7 +262,7 @@
 -(NaAtomRawData*) needCopy: atom rawData: (NaAtomRawData*)data {
     if ([data tip] < tip) {
         [[snapshotStack top] appendAtom:atom rawData:data];
-        data = [data deepCopy];
+        data = [data copyData];
     }
     return data;
 }
