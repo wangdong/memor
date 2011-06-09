@@ -29,12 +29,13 @@
 
 
 -(void) beforeWrite {
-    rawData = [[NaAtomStore sharedStore] needCopy: self rawData: rawData];
+    rawData = [[NaAtomStore sharedStore] needCopy:self rawData:rawData];
 }
 
 -(NaAtomRawData*) swapData: (NaAtomRawData*)data {
     NaAtomRawData* tmp = rawData;
     rawData = data;
+    [rawData retain];
     return tmp;
 }
 

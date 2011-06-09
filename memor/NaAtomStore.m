@@ -26,6 +26,19 @@
 @synthesize atom;
 @synthesize data;
 
+-(void) dealloc {
+    [atom release];
+    [data release];
+    [super dealloc];
+}
+
+-(id) init {
+    self = [super init];
+    atom = nil;
+    data = nil;
+    return self;
+}
+
 @end
 
 
@@ -55,21 +68,22 @@
 
 -(void) appendAtom: (NaAtom*)atom rawData: (NaAtomRawData*)data {
     NaAtomImage* image = [[NaAtomImage alloc] init];
-    image.atom = atom;
-    image.data = data;
+    [image setAtom:atom];
+    [image setData:data];
     [atomImages addObject:image];
+    [image release];
 }
 
 -(void) swapData {
-    for (id image in atomImages) {
-        NaAtomImage* image = (NaAtomImage*)image;
-        image.data = [image.atom swapData: image.data];
+    for (id i in atomImages) {
+        NaAtomImage* image = (NaAtomImage*)i;
+        NaAtomRawData* data = [[image atom] swapData: [image data]];
+        [image setData:data];
+        [data release];
     }
 }
 
 -(void) clear {
-    for (id i in atomImages)
-        [i release];
     [atomImages removeAllObjects];
 }
 
@@ -79,7 +93,7 @@
 @interface AtomSnapshotStack : NSObject {
 @private
     NSMutableArray* snapshots;
-    uint32_t top;
+    int32_t top;
     uint32_t capability;
 }
 
@@ -125,6 +139,7 @@
     if ([self snapshotsAhead] == 0) {
         NaAtomSnapshot* snapshot = [[NaAtomSnapshot alloc] init];
         [snapshots addObject:snapshot];
+        [snapshot release];
     }
     ++top;
     
@@ -143,10 +158,8 @@
 
 -(void) cleanupAhead {
     uint32_t size = [snapshots count];
-    for (uint32_t i = top + 1; i < size; ++i) {
-        [[snapshots lastObject] release];
+    for (uint32_t i = top + 1; i < size; ++i)
         [snapshots removeLastObject];
-    }
 }
 
 -(bool) isEmpty {
@@ -161,7 +174,6 @@
     for (id i in snapshots) {
         NaAtomSnapshot* snapshot = (NaAtomSnapshot*)i;
         [snapshot clear];
-        [snapshot release];
     }
     [snapshots removeAllObjects];
     
@@ -174,9 +186,8 @@
         int count = top - capability + 1;
         
         for (int i = 0; i < count; ++i) {
-            NaAtomSnapshot* snapshot = [snapshots objectAtIndex: i];
+            NaAtomSnapshot* snapshot = [snapshots objectAtIndex: 0];
             [snapshot clear];
-            [[snapshots objectAtIndex:0] release];
             [snapshots removeObjectAtIndex: 0];
             --top;
         }
@@ -209,7 +220,7 @@
 }
 
 -(int) maxSteps {
-    return ((AtomSnapshotStack*)snapshotStack).capability;
+    return [(AtomSnapshotStack*)snapshotStack capability];
 }
 
 -(void) setMaxSteps: (uint32_t)maxSteps {
@@ -229,7 +240,8 @@
 
 -(void) undo {
     if ([self canUndo]) {
-        [[snapshotStack top] swapData];
+        NaAtomSnapshot* snapshot = [snapshotStack top];
+        [snapshot swapData];
         [snapshotStack backward];
         --tip;
     }

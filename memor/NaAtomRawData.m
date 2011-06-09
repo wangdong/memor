@@ -15,7 +15,7 @@
 
 -(id) init {
     self = [super init];
-    tip = [NaAtomStore sharedStore].tip;
+    tip = [[NaAtomStore sharedStore] tip];
     return self;
 }
 
