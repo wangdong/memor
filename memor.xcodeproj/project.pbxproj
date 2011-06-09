@@ -47,7 +47,7 @@
 		7EB15FBD139FAFC400F22617 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7EB15FBF139FAFC400F22617 /* memorTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "memorTests-Prefix.pch"; sourceTree = "<group>"; };
 		7EB15FC0139FAFC400F22617 /* memorTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = memorTests.h; sourceTree = "<group>"; };
-		7EB15FC2139FAFC400F22617 /* memorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = memorTests.m; sourceTree = "<group>"; };
+		7EB15FC2139FAFC400F22617 /* memorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = memorTests.m; sourceTree = "<group>"; };
 		7EB15FCC139FB01800F22617 /* NaAtomStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NaAtomStore.h; sourceTree = "<group>"; };
 		7EB15FCD139FB01800F22617 /* NaAtomStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NaAtomStore.m; sourceTree = "<group>"; };
 		7EB15FD1139FB02500F22617 /* NaAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NaAtom.h; sourceTree = "<group>"; };
@@ -409,6 +409,7 @@
 				7EB15FC8139FAFC400F22617 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7EB15FC9139FAFC400F22617 /* Build configuration list for PBXNativeTarget "memorTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +418,7 @@
 				7EB15FCB139FAFC400F22617 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
