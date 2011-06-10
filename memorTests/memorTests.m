@@ -36,7 +36,11 @@
 
 
 @interface MyAtom : NaAtom {
+@private
+    int notifyCount;
 }
+
+@property(nonatomic, readonly) int notifyCount;
 
 -(NSString*) msg;
 -(void) putMsg: (NSString*) msg;
@@ -44,8 +48,11 @@
 @end
 
 @implementation MyAtom
+@synthesize notifyCount;
+
 
 -(id) init {
+    notifyCount = 0;
     MyAtomData* data = [[MyAtomData alloc] init];
     self = [super initWithRawData: data];
     [data release];
@@ -59,6 +66,10 @@
 -(void) putMsg: (NSString*)msg {
     [self beforeWrite];
     ((MyAtomData*)(self.rawData)).msg = msg;
+}
+
+-(void) didFinishSwapping {
+    ++notifyCount;
 }
 
 @end
@@ -205,6 +216,35 @@
     STAssertFalse([store canRedo], @"");
     STAssertFalse([store canUndo], @"");
     STAssertEquals(DEFAULT_MAX_UNDO_STEPS, [store maxSteps], @"");
+    
+    [pool drain];
+}
+
+-(void) testNotify {
+    
+    NSAutoreleasePool* pool = [[NSAutoreleasePool alloc] init];
+
+    NaAtomStore* store = [NaAtomStore sharedStore];
+    
+    MyAtom* atom = [[MyAtom alloc] init];
+    
+    [atom putMsg:@"ABC"];
+    [store commit];
+    
+    [store undo];
+    [store redo];
+    
+    STAssertEquals(0, atom.notifyCount, @"");
+    
+    
+    [atom putMsg: @"ABC"];
+    [store commit];
+    [atom putMsg: @"DEF"];
+    
+    [store undo];
+    [store redo];
+    
+    STAssertEquals(2, atom.notifyCount, @"");
     
     [pool drain];
 }
