@@ -27,7 +27,7 @@
 -(int) maxSteps;
 -(void) setMaxSteps: (uint32_t)maxSteps;
 
--(void) commit;
+-(void) snapshot;
 
 -(bool) canUndo;
 -(void) undo;

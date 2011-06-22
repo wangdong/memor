@@ -99,10 +99,10 @@
     
     [atom putMsg: @"Hello, World!"];
     
-    [store commit];
+    [store snapshot];
     [atom putMsg: @"Hello, Atom!"];
     [atom putMsg: @"Hello, AtomStore!"];
-    [store commit];
+    [store snapshot];
     [atom putMsg: @"Hello, AtomImage!"];
     
     STAssertEquals(@"Hello, AtomImage!", [atom msg], @"");
@@ -138,7 +138,7 @@
     [store undo];
     STAssertEquals(@"Hello, AtomStore!", [atom msg], @"");
     [atom putMsg:@"Hello, RedoRedo!"];
-    [store commit];
+    [store snapshot];
     
     STAssertFalse([store canRedo], @"");
     STAssertEquals(@"Hello, RedoRedo!", [atom msg], @"");
@@ -157,11 +157,11 @@
     MyAtom* atom =  [[[MyAtom alloc] init] autorelease];
     
     [atom putMsg:@"Hello, World!"];
-    [store commit];
+    [store snapshot];
     
     for (int i = 0; i < 20; ++i) {
         [atom putMsg:@"Hello, CAP!"];
-        [store commit];
+        [store snapshot];
     }
     
     for (int i = 0; i < 20; ++i)
@@ -184,7 +184,7 @@
     [store setMaxSteps:50];
     for (int i = 0; i < 50; ++i) {
         [atom putMsg: @"Hello, CAP!"];
-        [store commit];
+        [store snapshot];
     }
     for (int i = 0; i < 50; ++i)
         [store undo];
@@ -201,11 +201,11 @@
 
     MyAtom* atom = [[MyAtom alloc] init];
     [atom putMsg:@"ABC"];
-    [store commit];
+    [store snapshot];
     [atom putMsg:@"DEF"];
-    [store commit];
+    [store snapshot];
     [atom putMsg:@"HIG"];
-    [store commit];
+    [store snapshot];
     
     [store undo];
     STAssertTrue([store canRedo], @"");
@@ -229,7 +229,7 @@
     MyAtom* atom = [[MyAtom alloc] init];
     
     [atom putMsg:@"ABC"];
-    [store commit];
+    [store snapshot];
     
     [store undo];
     [store redo];
@@ -238,7 +238,7 @@
     
     
     [atom putMsg: @"ABC"];
-    [store commit];
+    [store snapshot];
     [atom putMsg: @"DEF"];
     
     [store undo];

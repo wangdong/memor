@@ -228,7 +228,7 @@
     [snapshotStack setCapability: maxSteps];
 }
 
--(void) commit {
+-(void) snapshot {
     if ([self canRedo])
         [snapshotStack cleanupAhead];
     [snapshotStack forward];
