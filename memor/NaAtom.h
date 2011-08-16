@@ -19,6 +19,7 @@
 
 -(id) initWithRawData: (NaAtomRawData*)data;
 -(void) beforeWrite;
+-(void) willSwap;
 -(NaAtomRawData*) swapData: (NaAtomRawData*)data;
 -(void) didFinishSwapping;
 

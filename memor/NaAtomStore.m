@@ -77,6 +77,7 @@
 -(void) swapData {
     for (id i in atomImages) {
         NaAtomImage* image = (NaAtomImage*)i;
+        [[image atom] willSwap];
         NaAtomRawData* data = [[image atom] swapData: [image data]];
         [[image atom] didFinishSwapping];
         [image setData:data];
